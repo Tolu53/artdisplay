@@ -1,4 +1,5 @@
-import Header from "./components/Header";
+import Banner from "./components/Banner";
+// import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Page from "./components/Page";
 
@@ -6,8 +7,9 @@ import Page from "./components/Page";
 function App() {
   return (
     <div className="">
-     <Header />
+     {/* <Header /> */}
      <Page />
+     <Banner />
      <Nav />
     </div>
   );
