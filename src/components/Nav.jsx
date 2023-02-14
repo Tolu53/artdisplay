@@ -1,24 +1,55 @@
 import React ,{useState} from 'react'
+import { FaTimes} from 'react-icons/fa'
+import img1 from '../assets/img2.jpg'
+import img2 from '../assets/img3.jpg'
+import img3 from '../assets/img4.jpg'
+import img4 from '../assets/img5.jpg'
+
 
 const Nav = () => {
 
     const  [isOpen, toggleOpen ] = useState(false);
+    const links = [{
+        id:1,
+        src:img1,
+        title:"Home",
+    },{
+        id:2,
+        src:img2,
+        title:"Art",
+    },{
+        id:3,
+        src:img3,
+        title:"Film",
+    },{
+        id:4,
+        src:img4,
+        title:"Photography",
+    }]
 
-    function openUp (){
-        // toggleOpen(isOpen = true);
-        alert("im open");
-    }
-    function closeUp (){
-        toggleOpen(isOpen = false)
-    }
   return (
     <div>
-        <div>
-            <div className='flex items-center justify-center'>
-            <button onClick={openUp} className='px-4 text-white bg-black absolute bottom-12 duration-500 hover:scale-110 active:scale-90'>
-             See More
+        <div className='duration-1000'>
+            
+            <div className='flex items-center justify-center duration-1000'>
+                
+            <button onClick={() => toggleOpen(!isOpen)} className='px-4 text-white bg-red-600 absolute bottom-12  hover:scale-110 active:scale-90 z-50 active:rounded-[100%] duration-1000'>
+            { isOpen ? < FaTimes size={30} className='duration-500' />: "See More"}
             </button>
+{isOpen  && (<div className='bg-black w-full h-[20vw] absolute bottom-0 justify-center items-center duration-500 flex'>
+<div className='flex justify-center items-center text-white  duration-1000'>
+            {links.map(({ id, title, src}) =>(
+          <div key={id} className=' px-4 cursor-pointer first-letter:capitalize font-medium
+           hover:scale-105 duration-1000 list-none  '>
+            <a >{title}</a>
+            <img src={src} alt={title} className=' h-32 object-cover aspect-video ' />
+            </div>
+        ))
+        }
+            </div>
+</div>)}
 
+       
             </div>
         </div>
     </div>

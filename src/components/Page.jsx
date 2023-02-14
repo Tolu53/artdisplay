@@ -1,5 +1,5 @@
 import React from 'react'
-import pic1 from '../assets/amor-Ka1fD6H28Hc-unsplash.jpg'
+import pic1 from '../assets/img1.jpg'
 
 const Page = () => {
   return (
