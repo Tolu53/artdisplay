@@ -1,7 +1,7 @@
 import React from 'react'
 import Marquee from 'react-fast-marquee'
-import {GiAfrica} from 'react-icons/gi'
-import africa from '../assets/Africa.webp'
+
+
 
 const Banner = () => {
   return (
@@ -12,9 +12,8 @@ const Banner = () => {
 <Marquee gradient={false} speed={200} pauseOnHovr>
 <div className=' md:text-[10vw] text-6xl flex justify-evenly w-[250vw] duration-300 my-20 '>
 <a href="#"><span className='text-green-700'>Film</span> </a>
-<a href="#"><span className='text-white'>Photo</span> </a>
+<a href="#"><span className='text-black'>Photography</span> </a>
 <a href="#"><span className='text-green-700'>Art</span> </a>
-<GiAfrica />
 </div>
 </Marquee>
 <h1 className=' md:text-[10vw] text-6xl px-10 '> Display</h1>

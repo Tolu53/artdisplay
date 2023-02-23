@@ -12,11 +12,11 @@ const Nav = () => {
     const links = [{
         id:1,
         src:img1,
-        title:"About",
+        title:"Home",
     },{
         id:2,
         src:img2,
-        title:"Art",
+        title:"About",
     },{
         id:3,
         src:img3,
@@ -25,6 +25,10 @@ const Nav = () => {
         id:4,
         src:img4,
         title:"Photography",
+    },{
+        id:5,
+        src:img1,
+        title:"Art",
     }]
 
   return (
